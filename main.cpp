@@ -183,7 +183,7 @@ uint8_t readMeter(u_int8_t slave_id){
     result = modbus.readInputRegisters(WS100_MODBUS_OFFSET_VOLTAGE, 2);
     modbus.snprintResult(lastResult, 30, result);
     if (result == modbus.ku8MBSuccess){
-        snprintf(x, 45, "V: %f\n", ((modbus.getResponseBuffer(0) << 16 ) + modbus.getResponseBuffer(1)) / WS100_MODBUS_PRECISION_VOLTAGE);
+        snprintf(x, 45, "V: %.3f\n", ((modbus.getResponseBuffer(0) << 16 ) + modbus.getResponseBuffer(1)) / WS100_MODBUS_PRECISION_VOLTAGE);
         R = R + x; 
     } else {
         R = R + "V: " + lastResult + "\n";
@@ -194,7 +194,7 @@ uint8_t readMeter(u_int8_t slave_id){
     result = modbus.readInputRegisters(WS100_MODBUS_OFFSET_CURRENT, 2);
     modbus.snprintResult(lastResult, 30, result);
     if (result == modbus.ku8MBSuccess){
-        snprintf(x, 45, "A: %f\n", ((modbus.getResponseBuffer(0) << 16 ) + modbus.getResponseBuffer(1)) / WS100_MODBUS_PRECISION_CURRENT);
+        snprintf(x, 45, "A: %.3f\n", ((modbus.getResponseBuffer(0) << 16 ) + modbus.getResponseBuffer(1)) / WS100_MODBUS_PRECISION_CURRENT);
         R = R + x; 
     } else {
         R = R + "A: " + lastResult + "\n";
@@ -229,7 +229,7 @@ uint8_t readMeter(u_int8_t slave_id){
     result = modbus.readInputRegisters(WS100_MODBUS_OFFSET_FREQUENCY, 1);
     modbus.snprintResult(lastResult, 30, result);
     if (result == modbus.ku8MBSuccess){
-        snprintf(x, 45, "Hz: %f\n", modbus.getResponseBuffer(0) / WS100_MODBUS_PRECISION_FREQUENCY);
+        snprintf(x, 45, "Hz: %.1f\n", modbus.getResponseBuffer(0) / WS100_MODBUS_PRECISION_FREQUENCY);
         R = R + x; 
     } else {
         R = R + "Hz: " + lastResult + "\n";
