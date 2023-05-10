@@ -2,7 +2,7 @@
 
 DIN-Trägerschienen-Multifunktionaler Einphasen- Wirkleistungszähler (MID-zertifiziert)
 
-####Example of output:
+###Example of output:
 
 ```
            Uptime: 33 
@@ -22,15 +22,13 @@ FlashChipRealSize: 4194304
 
 
  11 May 2023 00:57:24 
-V: 230.980000
+V: 230.980
 
-A: 0.422000
+A: 0.422
 
 W: 87
 
 VA: 97
 
-Hz: 50.000000
-
-
+Hz: 50.0
 ```
