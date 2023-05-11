@@ -6,7 +6,6 @@
 #include "modbusRTU.h"
 #include "util.h"
 #include <time.h>
-#include "SDM72DM.h"
 #include "ws100-19l3.h"
 #pragma endregion
 

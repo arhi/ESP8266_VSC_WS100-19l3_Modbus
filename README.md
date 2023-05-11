@@ -2,7 +2,7 @@
 
 DIN-Trägerschienen-Multifunktionaler Einphasen- Wirkleistungszähler (MID-zertifiziert)
 
-###Example of output:
+#### Example of output:
 
 ```
            Uptime: 33 
